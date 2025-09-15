@@ -4,5 +4,8 @@
 // If the value is exactly true or false, typeof will return "boolean", so the function returns true.
 // For any other type (numbers, strings, objects, arrays, etc.), typeof will NOT return "boolean", so the function returns false.
 function booWho(value){
-    return typeof value ==="boolean";
+    return typeof value === "boolean";
 }
+
+console.log(booWho(true)); //returns true
+console.log(booWho("true")); //returns false
