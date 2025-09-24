@@ -18,3 +18,20 @@ const recipe2 = {
   difficultyLevel: "",
   averageRating: null,
 }
+
+const recipe3 = {
+  name: 'Vegetable Stir Fry',
+  ingredients: ['broccoli', 'carrot', 'bell pepper'],
+  cookingTime: 15,
+  totalIngredients: null,
+  difficultyLevel: '',
+  ratings: [4, 3, 4, 5],
+  averageRating: null,
+};
+
+function getAverageRating(ratings) {
+  return ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+}
+
+console.log(getAverageRating([4, 5, 4, 5])); 
+console.log(getAverageRating([4, 5, 5, 5])); 
