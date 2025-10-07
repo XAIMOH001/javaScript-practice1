@@ -6,5 +6,21 @@ function getAverage(scores){
     let average = total / scores.length;
     return average;
 }
-console.log(getAverage([90, 95, 85, 100]));
-console.log(getAverage([70, 80, 90]));
+
+function getGrade(score){
+  let result = "";
+  if (score === 100){
+    result = "A+";
+  }else if (score <= 99 && score >= 90){
+    result = "A";
+  }else if (score <= 89 && score >= 80){
+    result = "B";
+  }else if (score <= 79 && score >= 70){
+    result = "C";
+  }else if (score <= 69 && score >= 60){
+    result = "D";
+  }else if (score <= 59 && score >= 0){
+    result = "F";
+  }
+  return result;
+}
