@@ -24,3 +24,33 @@ function getGrade(score){
   }
   return result;
 }
+
+
+
+function hasPassingGrade (score){
+  return getGrade(score) != "F";
+}
+
+function studentMsg(scores, score){
+  if (getGrade(score) != "F"){
+    return `Class average: ${getAverage(scores)}. Your grade: ${getGrade(score)}. You passed the course.`
+  }else{
+    return `Class average: ${getAverage(scores)}. Your grade: ${getGrade(score)}. You failed the course.`
+  }
+}
+
+
+let scores = [90, 80, 70, 60, 50];
+let studentScore = 59; 
+console.log(studentMsg(scores, studentScore));
+studentScore = 60;
+console.log(studentMsg(scores, studentScore));
+studentScore = 100;
+console.log(studentMsg(scores, studentScore));
+studentScore = 0;
+console.log(studentMsg(scores, studentScore));
+
+studentScore = 85;
+console.log(studentMsg(scores, studentScore));
+studentScore = 45;
+console.log(studentMsg(scores, studentScore)); 
