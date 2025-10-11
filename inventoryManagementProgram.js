@@ -1,31 +1,29 @@
 // Inventory Management Program
 
-// 1️⃣ Declare an empty inventory array
+//Declare an empty inventory array
 let inventory = [];
 
-// 2️⃣ Function to find product index (case-insensitive)
+//find product index 
 function findProductIndex(productName) {
   productName = productName.toLowerCase();
   return inventory.findIndex(item => item.name === productName);
 }
 
-// 3️⃣ Function to add a product or update existing quantity
 function addProduct(product) {
   product.name = product.name.toLowerCase();
   const index = findProductIndex(product.name);
 
   if (index !== -1) {
-    // Product exists → update quantity
+    //update quantity
     inventory[index].quantity += product.quantity;
     console.log(`${product.name} quantity updated`);
   } else {
-    // New product → add to inventory
+    // add to inventory
     inventory.push(product);
     console.log(`${product.name} added to inventory`);
   }
 }
 
-// 4️⃣ Function to remove product or update quantity
 function removeProduct(productName, quantity) {
   productName = productName.toLowerCase();
   const index = findProductIndex(productName);
@@ -52,7 +50,8 @@ function removeProduct(productName, quantity) {
   }
 }
 
-// 5️⃣ Example usage (You can modify this section to test)
+
+
 addProduct({ name: "Apple", quantity: 10 });
 addProduct({ name: "apple", quantity: 5 });
 addProduct({ name: "Banana", quantity: 8 });
@@ -62,5 +61,5 @@ removeProduct("apple", 10);
 removeProduct("banana", 2);
 removeProduct("mango", 3);
 
-// 6️⃣ Display the final inventory
+// 6️ Display the final inventory
 console.log("Final Inventory:", inventory);
