@@ -1,3 +1,7 @@
+/*This algorithm takes an array of two numbers
+ and returns the sum of those two numbers plus 
+ the sum of all the numbers between them.
+ */
 function sumAll(arr){
     const min  = Math.min(arr[0], arr[1]);
     const max  = Math.max(arr[0], arr[1]);
