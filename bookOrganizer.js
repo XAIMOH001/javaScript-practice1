@@ -20,7 +20,6 @@ function sortByYear(book1, book2){
 //Filter out books written after a certain year
 const filteredBooks = books.filter(book => book.releaseYear <= 1950);
 
-// Sort the filtered books
 filteredBooks.sort(sortByYear);
 
 console.log("Filtered and Sorted Books:");
