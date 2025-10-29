@@ -1,0 +1,28 @@
+function sumPrimes(num) {
+  // If num is less than 2, there are no primes
+  if (num < 2) return 0;
+
+  // Helper function to check if a number is prime
+  function isPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) return false;
+    }
+    return true;
+  }
+
+  // Sum all prime numbers up to num
+  let sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+
+// Example tests
+console.log(sumPrimes(10));  // Output: 17  (2 + 3 + 5 + 7)
+console.log(sumPrimes(0));   // Output: 0
+console.log(sumPrimes(2));   // Output: 2
